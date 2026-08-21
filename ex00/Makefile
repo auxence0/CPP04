@@ -6,7 +6,7 @@
 #    By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/22 11:52:07 by asauvage          #+#    #+#              #
-#    Updated: 2026/08/21 13:59:30 by asauvage         ###   ########.fr        #
+#    Updated: 2026/08/21 14:23:47 by asauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ NAME = Animal
 SRCS = main.cpp \
 	   Animal.cpp \
 	   Cat.cpp \
-	   Dog.cpp
+	   Dog.cpp \
+	   WrongAnimal.cpp \
+	   WrongCat.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 

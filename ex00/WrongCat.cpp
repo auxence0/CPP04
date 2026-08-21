@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/21 11:30:18 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 14:17:57 by asauvage         ###   ########.fr       */
+/*   Created: 2026/08/21 14:16:08 by asauvage          #+#    #+#             */
+/*   Updated: 2026/08/21 14:20:48 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongCat.hpp"
 
-Animal::Animal(): type("Default Animal") {
-	std::cout << "Constructor Animal called\n";
+WrongCat::WrongCat(): WrongAnimal(){
+	type = "WrongCat";
+	std::cout << "Constructor WrongCat called\n";
 	return ;
 };
 
-Animal::Animal( const Animal& obj ) {
+WrongCat::WrongCat( const WrongCat& obj ): WrongAnimal(obj) {
 	*this = obj;
-	std::cout << "Copy Constructor Animal called\n";
+	std::cout << "Copy Constructor WrongCat called\n";
 	return ;
 }
 
-Animal&	Animal::operator=( const Animal& rhs ) {
+WrongCat&	WrongCat::operator=( const WrongCat& rhs ) {
 	type = rhs.type;
 	return *this;
 };
 
-Animal::~Animal() {
-	std::cout << "Destructor Animal called\n";
+WrongCat::~WrongCat() {
+	std::cout << "Destructor WrongCat called\n";
 	return ;
 };
 
-void	Animal::makeSound() const {
-	std::cout << "Brrrr Brrrr Patapim\n";
-	return ;	
+void	WrongCat::makeSound() const {
+	std::cout << "Faux Chat miaou\n";
+	return ;
 };
-
-std::string	Animal::getType() const {
-	return type;
-}
