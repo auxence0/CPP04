@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/19 16:51:03 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 13:58:31 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/21 16:32:09 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	Animal {
 		Animal ( const Animal& obj );
 		Animal&	operator=( const Animal& rhs );
 		virtual ~Animal();
-		virtual void	makeSound() const;
+		virtual void	makeSound() const = 0;
 		std::string	getType() const;
 	protected:
 		std::string	type;
