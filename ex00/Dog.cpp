@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 13:52:44 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 14:01:32 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/21 16:29:14 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ Dog::Dog( const Dog& obj ): Animal(obj) {
 }
 
 Dog&	Dog::operator=( const Dog& rhs ) {
-	type = rhs.type;
+	if (this != &rhs) {
+		type = rhs.type;
+	}
 	return *this;
 };
 
