@@ -6,7 +6,7 @@
 #    By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/22 11:52:07 by asauvage          #+#    #+#              #
-#    Updated: 2026/08/21 14:23:47 by asauvage         ###   ########.fr        #
+#    Updated: 2026/08/21 14:49:53 by asauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,15 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = Animal
+NAME = Brain
 
 SRCS = main.cpp \
 	   Animal.cpp \
 	   Cat.cpp \
 	   Dog.cpp \
 	   WrongAnimal.cpp \
-	   WrongCat.cpp
+	   WrongCat.cpp \
+	   Brain.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 

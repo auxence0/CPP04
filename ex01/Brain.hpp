@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/19 16:55:50 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 16:06:07 by asauvage         ###   ########.fr       */
+/*   Created: 2026/08/21 14:26:02 by asauvage          #+#    #+#             */
+/*   Updated: 2026/08/21 15:58:21 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+# include <string>
+# include <iostream>
 
-class	Cat: public Animal {
+class	Brain {
 	public:
-		Cat();
-		Cat( const Cat& obj );
-		Cat&	operator=( const Cat& rhs );
-		virtual ~Cat();
-		virtual void	makeSound() const;
-		void	SetIdeas(int index, std::string str);
-		std::string	GetIdeas(int index);	private:
-		Brain*	brain;
+		Brain();
+		Brain( const Brain& obj );
+		Brain&	operator=( const Brain& rhs );
+		~Brain();
+		void	SetIdeas( int index, std::string str );
+		std::string	GetIdeas( int index );
+	private:
+		std::string	ideas[100];
 };
 
 #endif
