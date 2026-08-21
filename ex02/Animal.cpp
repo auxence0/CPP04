@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 11:30:18 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 16:27:08 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/21 17:21:22 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,6 @@ Animal&	Animal::operator=( const Animal& rhs ) {
 Animal::~Animal() {
 	std::cout << "Destructor Animal called\n";
 	return ;
-};
-
-void	Animal::makeSound() const {
-	std::cout << "Brrrr Brrrr Patapim\n";
-	return ;	
 };
 
 std::string	Animal::getType() const {
