@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/21 13:54:32 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 13:58:57 by asauvage         ###   ########.fr       */
+/*   Created: 2026/08/21 13:52:44 by asauvage          #+#    #+#             */
+/*   Updated: 2026/08/21 14:01:32 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-#include "Cat.hpp"
 
-int main()
-{
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+Dog::Dog(): Animal(){
+	type = "Dog";
+	std::cout << "Constructor Dog called\n";
+	return ;
+};
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-
-	return 0;
+Dog::Dog( const Dog& obj ): Animal(obj) {
+	*this = obj;
+	std::cout << "Copy Constructor Dog called\n";
+	return ;
 }
+
+Dog&	Dog::operator=( const Dog& rhs ) {
+	type = rhs.type;
+	return *this;
+};
+
+Dog::~Dog() {
+	std::cout << "Destructor Dog called\n";
+	return ;
+};
+
+void	Dog::makeSound() const {
+	std::cout << "Chien woaf\n";
+	return ;
+};

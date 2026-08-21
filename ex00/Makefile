@@ -6,7 +6,7 @@
 #    By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/22 11:52:07 by asauvage          #+#    #+#              #
-#    Updated: 2026/08/17 17:03:13 by asauvage         ###   ########.fr        #
+#    Updated: 2026/08/21 13:59:30 by asauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,12 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = DiamondTrap
+NAME = Animal
 
 SRCS = main.cpp \
-	   ClapTrap.cpp \
-	   ScavTrap.cpp \
-	   FragTrap.cpp \
-	   DiamondTrap.cpp
+	   Animal.cpp \
+	   Cat.cpp \
+	   Dog.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 

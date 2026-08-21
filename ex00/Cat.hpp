@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/19 16:55:50 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/19 17:02:04 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/21 13:58:50 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class	Cat: public Animal {
 		Cat();
 		Cat( const Cat& obj );
 		Cat&	operator=( const Cat& rhs );
-		~Cat();
-		void	makeSound();
+		virtual ~Cat();
+		virtual void	makeSound() const;
 };
 
 #endif
