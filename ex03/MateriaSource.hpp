@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/21 17:30:27 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/24 14:12:48 by asauvage         ###   ########.fr       */
+/*   Created: 2026/08/24 10:37:05 by asauvage          #+#    #+#             */
+/*   Updated: 2026/08/24 13:38:51 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 # include "AMateria.hpp"
+# include "Cure.hpp"
+# include "Ice.hpp"
 
-class	Ice: public AMateria {
+class	MateriaSource: public IMateriaSource {
+	protected:
+		AMateria*	materias_[4];
 	public:
-		Ice();
-		~Ice();
-		Ice( const Ice& rhs );
-		Ice&		operator=( const Ice& rhs );
-		AMateria*	clone() const override;
-		void		use( ICharacter& target ) override;
+		MateriaSource();
+		~MateriaSource();
+		MateriaSource( const MateriaSource& obj );
+		MateriaSource&	operator=( const MateriaSource& rhs );
+		void			learnMateria(AMateria*) override;
+		AMateria*		createMateria(std::string const & type) override;
 };
 
 #endif

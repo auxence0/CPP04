@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/21 17:27:36 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/24 15:31:21 by asauvage         ###   ########.fr       */
+/*   Created: 2026/08/24 15:39:01 by asauvage          #+#    #+#             */
+/*   Updated: 2026/08/24 16:12:25 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMateria_HPP
-# define AMateria_HPP
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
-# include <string>
-# include <iostream>
 # include "ICharacter.hpp"
 
-class	AMateria {
-	protected:
-		std::string			type_;
+class	Character: public ICharacter {
+	private:
+		std::string	name_;
 	public:
-		AMateria();
-		AMateria( std::string const & type );
-		~AMateria();
-		AMateria&	operator=( const AMateria& rhs );
-		std::string const & getType() const; //Returns the materia type
-		void				setType(const std::string type);
-		virtual	AMateria*	clone() const = 0;
-		virtual	void		use(ICharacter& target);
+		~Character();
+		Character();
+		Character( const Character& rhs);
+		Character&			operator=( const Character& obj );
+		std::string const&	getName() const override;
+		void				equip(AMateria* m) override;
+		void				unequip(int idx) override;
+		void				use(int idx, ICharacter& target) override;
 };
 
 #endif

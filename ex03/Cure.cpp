@@ -1,28 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/21 17:30:27 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/24 14:12:48 by asauvage         ###   ########.fr       */
+/*   Created: 2026/08/24 14:13:18 by asauvage          #+#    #+#             */
+/*   Updated: 2026/08/24 16:13:19 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#include "Cure.hpp"
 
-# include "AMateria.hpp"
+Cure::Cure(): AMateria("Cure") {
 
-class	Ice: public AMateria {
-	public:
-		Ice();
-		~Ice();
-		Ice( const Ice& rhs );
-		Ice&		operator=( const Ice& rhs );
-		AMateria*	clone() const override;
-		void		use( ICharacter& target ) override;
-};
+	return ;
+}
 
-#endif
+Cure::Cure( const Cure& obj ): AMateria(obj) {
+	*this = obj;
+	return ;
+}
+
+Cure&	Cure::operator=( const Cure& rhs ) {
+	
+	return *this;
+}
+
+Cure::~Cure() {
+	return ;
+}
+
+void	use( ICharacter& target ) {
+	std::cout << "* heals" << target.getName() << "'s wounds *\n";
+	return ;
+}
+
+AMateria*	clone() {
+	
+}
+
