@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 17:27:36 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/24 15:31:21 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/25 14:49:38 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class	AMateria {
 	public:
 		AMateria();
 		AMateria( std::string const & type );
+		AMateria( const AMateria& obj );
 		~AMateria();
 		AMateria&	operator=( const AMateria& rhs );
 		std::string const & getType() const; //Returns the materia type

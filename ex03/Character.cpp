@@ -6,17 +6,17 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:46:28 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/25 12:13:07 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/25 15:41:26 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character() {
+Character::Character(): ICharacter() {
 	return ;
 }
 
-Character::Character( const Character& obj ) {
+Character::Character( const Character& obj ): ICharacter() {
 	return ;
 };
 
@@ -32,14 +32,14 @@ std::string const&	Character::getName() const {
 	return name_;
 }
 
-void	equip( AMateria* m ) {
-
+void	Character::equip( AMateria* m ) {
+	
 }
 
-void	unequip( int idx ) {
-
+void	Character::unequip( int idx ) {
+	
 }
 
-void	use( int idx, ICharacter& target ) {
+void	Character::use( int idx, ICharacter& target ) {
 	
 }

@@ -6,22 +6,23 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:28:23 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/24 14:14:11 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/25 14:51:20 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 
-MateriaSource::MateriaSource(): materias_{NULL} {
+MateriaSource::MateriaSource(): IMateriaSource(), materias_{NULL} {
 	return ;
 }
 
-MateriaSource::MateriaSource( const MateriaSource& obj ) {
+MateriaSource::MateriaSource( const MateriaSource& obj ): IMateriaSource(obj) {
 	*this = obj;
 	return ;
 }
 
 MateriaSource::~MateriaSource() {
+	return ;
 }
 
 MateriaSource&	MateriaSource::operator=( const MateriaSource& rhs ) {
