@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:37:05 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/24 13:38:51 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/25 11:47:04 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "AMateria.hpp"
 # include "Cure.hpp"
 # include "Ice.hpp"
+# include "IMateriaSource.hpp"
 
 class	MateriaSource: public IMateriaSource {
 	protected:

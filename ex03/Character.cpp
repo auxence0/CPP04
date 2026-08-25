@@ -5,28 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/24 15:39:01 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/24 16:12:25 by asauvage         ###   ########.fr       */
+/*   Created: 2026/08/25 11:46:28 by asauvage          #+#    #+#             */
+/*   Updated: 2026/08/25 12:13:07 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHARACTER_HPP
-# define CHARACTER_HPP
+#include "Character.hpp"
 
-# include "ICharacter.hpp"
+Character::Character() {
+	return ;
+}
 
-class	Character: public ICharacter {
-	private:
-		std::string	name_;
-	public:
-		~Character();
-		Character();
-		Character( const Character& rhs);
-		Character&			operator=( const Character& obj );
-		std::string const&	getName() const override;
-		void				equip(AMateria* m) override;
-		void				unequip(int idx) override;
-		void				use(int idx, ICharacter& target) override;
+Character::Character( const Character& obj ) {
+	return ;
 };
 
-#endif
+Character&	Character::operator=( const Character& rhs ) {
+	return ;
+}
+
+Character::~Character () {
+	return ;
+}
+
+std::string const&	Character::getName() const {
+	return name_;
+}
+
+void	equip( AMateria* m ) {
+
+}
+
+void	unequip( int idx ) {
+
+}
+
+void	use( int idx, ICharacter& target ) {
+	
+}

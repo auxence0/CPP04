@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.cpp                                           :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/24 14:13:18 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/25 11:47:29 by asauvage         ###   ########.fr       */
+/*   Created: 2026/08/25 11:16:38 by asauvage          #+#    #+#             */
+/*   Updated: 2026/08/25 11:47:03 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cure.hpp"
+# include "Ice.hpp"
 
-Cure::Cure(): AMateria("cure") {
-
+Ice::Ice(): AMateria("ice") {
 	return ;
 }
 
-Cure::Cure( const Cure& obj ): AMateria(obj) {
-	*this = obj;
+Ice::Ice( const Ice& obj ): AMateria(obj) {
 	return ;
 }
 
-Cure&	Cure::operator=( const Cure& rhs ) {
-	
+Ice&	Ice::operator=( const Ice& rhs ) {
+
 	return *this;
 }
 
-Cure::~Cure() {
+Ice::~Ice() {
 	return ;
 }
 
 void	use( ICharacter& target ) {
-	std::cout << "* heals" << target.getName() << "'s wounds *\n";
+	std::cout << "* shoots an ice bolt at " << "\n";
 	return ;
 }
 
 AMateria*	clone() {
-	
-}
 
+	return ;
+}
