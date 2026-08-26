@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:39:01 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/25 15:02:36 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/26 13:33:57 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class	Character: public ICharacter {
 	private:
 		std::string	name_;
-		AMateria*	inventory[4];
+		AMateria*	inventory_[4];
 	public:
 		~Character();
 		Character();

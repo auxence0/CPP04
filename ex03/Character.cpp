@@ -6,13 +6,13 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:46:28 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/25 15:41:26 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/26 14:08:14 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character(): ICharacter() {
+Character::Character(): ICharacter(), inventory_{NULL} {
 	return ;
 }
 
@@ -33,13 +33,23 @@ std::string const&	Character::getName() const {
 }
 
 void	Character::equip( AMateria* m ) {
-	
+	int	i(0);
+	while (i < 4 && inventory_[i]) {
+		++i;
+	}
+	if (i != 4 && m)
+		inventory_[i] = m;
+	return ;
 }
 
 void	Character::unequip( int idx ) {
-	
+	if (idx >= 0 && idx < 4)
+		inventory_[idx] = NULL;
+	return ;
 }
 
 void	Character::use( int idx, ICharacter& target ) {
-	
+	if (idx >= 0 && idx < 4) {
+		inventory_[idx]->use(target);
+	}
 }
