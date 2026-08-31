@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:28:23 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 16:40:45 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 17:24:05 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,9 @@ MateriaSource::MateriaSource( const MateriaSource& obj ): IMateriaSource(obj) {
 
 MateriaSource::~MateriaSource() {
 	for (int i = 0; i < 4; ++i) {
-		if (materias_[i]) {
+		if (materias_[i])
 			delete	materias_[i];
-			materias_[i] = NULL;
-		}
+		materias_[i] = NULL;
 	}
 	return ;
 }
@@ -54,7 +53,7 @@ MateriaSource&	MateriaSource::operator=( const MateriaSource& rhs ) {
 
 void	MateriaSource::learnMateria(AMateria* materias) {
 	int	i(0);
-	while (materias_[i])
+	while (i < 4 && materias_[i])
 		i++;
 	if (i < 4 && materias)
 		materias_[i] = materias;

@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:46:28 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 16:42:42 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 17:56:49 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ Character::~Character () {
 			delete	inventory_[i];
 		inventory_[i] = NULL;
 	}
-	return ;
 }
 
 std::string const&	Character::getName() const {
@@ -68,7 +67,7 @@ void	Character::equip( AMateria* m ) {
 	int	i(0);
 	while (i < 4 && inventory_[i])
 		++i;
-	if (i != 4 && m)
+	if (i < 4 && m)
 		inventory_[i] = m;
 	return ;
 }
@@ -84,4 +83,5 @@ void	Character::use( int idx, ICharacter& target ) {
 		std::cout << inventory_[idx]->getType();
 		inventory_[idx]->use(target);
 	}
+	return ;
 }
