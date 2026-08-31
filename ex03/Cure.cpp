@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 14:13:18 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 09:53:51 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 13:18:57 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,3 @@ void	Cure::use( ICharacter& target ) {
 AMateria*	Cure::clone() const {
 	return	new	Cure(*this);
 }
-

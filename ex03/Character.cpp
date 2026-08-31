@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:46:28 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 11:30:43 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 13:16:17 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,11 @@ Character&	Character::operator=( const Character& rhs ) {
 }
 
 Character::~Character () {
+	for (int i = 0; i < 4; ++i) {
+		if (inventory_[i])
+			delete	inventory_[i];
+		inventory_[i] = NULL;
+	}
 	return ;
 }
 
