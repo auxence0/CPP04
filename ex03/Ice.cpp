@@ -6,11 +6,13 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:16:38 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/25 15:38:29 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 10:58:46 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Ice.hpp"
+#include "Ice.hpp"
+#include "ICharacter.hpp"
+#include "AMateria.hpp"
 
 Ice::Ice(): AMateria("ice") {
 	return ;
@@ -21,7 +23,7 @@ Ice::Ice( const Ice& obj ): AMateria(obj) {
 }
 
 Ice&	Ice::operator=( const Ice& rhs ) {
-
+	(void)rhs;
 	return *this;
 }
 

@@ -6,7 +6,7 @@
 #    By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/22 11:52:07 by asauvage          #+#    #+#              #
-#    Updated: 2026/08/24 09:45:01 by asauvage         ###   ########.fr        #
+#    Updated: 2026/08/31 09:31:24 by asauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,11 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 NAME = Interface
 
 SRCS = main.cpp \
+	   MateriaSource.cpp \
+	   Ice.cpp \
+	   Cure.cpp \
+	   Character.cpp \
+	   AMateria.cpp
 
 
 OBJS := $(SRCS:.cpp=.o)

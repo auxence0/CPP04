@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:47:03 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/24 14:13:04 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 09:29:55 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Cure: public AMateria {
 		~Cure();
 		Cure( const Cure& obj );
 		Cure&		operator=( const Cure& rhs );
-		AMateria*	clone() const override;
-		void		use( ICharacter& target ) override;
+		AMateria*	clone() const;
+		void		use( ICharacter& target );
 };
 
 #endif

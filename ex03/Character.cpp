@@ -6,22 +6,50 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:46:28 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/26 14:08:14 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 11:30:43 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+#include "AMateria.hpp"
 
-Character::Character(): ICharacter(), inventory_{NULL} {
+Character::Character(): ICharacter(){
+	for (int i = 0; i < 4; ++i)
+		inventory_[i] = NULL;
+	return ;
+}
+
+Character::Character( std::string name ): name_(name){
+	for (int i = 0; i < 4; ++i)
+		inventory_[i] = NULL;
 	return ;
 }
 
 Character::Character( const Character& obj ): ICharacter() {
+	name_ = obj.name_;
+	for (int i = 0; i < 4; ++i) {
+		if (obj.inventory_[i])
+			inventory_[i] = obj.inventory_[i]->clone();
+		else
+			inventory_[i] = NULL;
+	}
+	*this = obj;
 	return ;
 };
 
 Character&	Character::operator=( const Character& rhs ) {
-	return ;
+	if (this != &rhs) {
+		name_ = rhs.name_;
+		for (int i = 0; i < 4;) {
+			if (inventory_[i])
+				delete	inventory_[i];
+			if (rhs.inventory_[i])
+				inventory_[i] = rhs.inventory_[i]->clone();
+			else
+				inventory_[i] = NULL;
+		}
+	}
+	return *this;
 }
 
 Character::~Character () {
@@ -34,9 +62,8 @@ std::string const&	Character::getName() const {
 
 void	Character::equip( AMateria* m ) {
 	int	i(0);
-	while (i < 4 && inventory_[i]) {
+	while (i < 4 && inventory_[i])
 		++i;
-	}
 	if (i != 4 && m)
 		inventory_[i] = m;
 	return ;
@@ -49,7 +76,8 @@ void	Character::unequip( int idx ) {
 }
 
 void	Character::use( int idx, ICharacter& target ) {
-	if (idx >= 0 && idx < 4) {
+	if (idx >= 0 && idx < 4 && inventory_[idx]) {
+		std::cout << inventory_[idx]->getType();
 		inventory_[idx]->use(target);
 	}
 }

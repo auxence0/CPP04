@@ -6,11 +6,12 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 14:13:18 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/25 15:37:52 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 09:53:51 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
+#include "ICharacter.hpp"
 
 Cure::Cure(): AMateria("cure") {
 
@@ -23,7 +24,7 @@ Cure::Cure( const Cure& obj ): AMateria(obj) {
 }
 
 Cure&	Cure::operator=( const Cure& rhs ) {
-	
+	(void)rhs;
 	return *this;
 }
 

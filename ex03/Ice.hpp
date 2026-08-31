@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 17:30:27 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/24 14:12:48 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 09:30:06 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class	Ice: public AMateria {
 		~Ice();
 		Ice( const Ice& rhs );
 		Ice&		operator=( const Ice& rhs );
-		AMateria*	clone() const override;
-		void		use( ICharacter& target ) override;
+		AMateria*	clone() const;
+		void		use( ICharacter& target );
 };
 
 #endif
