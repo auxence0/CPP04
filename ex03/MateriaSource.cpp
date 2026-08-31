@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:28:23 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 15:45:26 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 16:40:45 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,12 @@ MateriaSource::MateriaSource(): IMateriaSource() {
 }
 
 MateriaSource::MateriaSource( const MateriaSource& obj ): IMateriaSource(obj) {
-	*this = obj;
+	for (int i = 0; i < 4; ++i) {
+		if (obj.materias_[i])
+			materias_[i] = obj.materias_[i]->clone();
+		else
+			materias_[i] = NULL;
+	}
 	return ;
 }
 
