@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:28:23 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 11:30:25 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 11:36:32 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ void	MateriaSource::learnMateria(AMateria* materias) {
 		i++;
 	if (i < 4 && materias)
 		materias_[i] = materias;
-	else
-		delete	materias;
 }
 
 AMateria*	MateriaSource::createMateria( std::string const & type ) {

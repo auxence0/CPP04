@@ -6,13 +6,13 @@
 #    By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/22 11:52:07 by asauvage          #+#    #+#              #
-#    Updated: 2026/08/31 09:31:24 by asauvage         ###   ########.fr        #
+#    Updated: 2026/08/31 11:35:17 by asauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 
 NAME = Interface
 
