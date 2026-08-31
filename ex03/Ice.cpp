@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:16:38 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 10:58:46 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 15:43:15 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Ice::Ice(): AMateria("ice") {
 }
 
 Ice::Ice( const Ice& obj ): AMateria(obj) {
+	type_ = obj.type_;
 	return ;
 }
 

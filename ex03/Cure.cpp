@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 14:13:18 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 13:18:57 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 15:43:34 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cure::Cure(): AMateria("cure") {
 }
 
 Cure::Cure( const Cure& obj ): AMateria(obj) {
-	*this = obj;
+	type_ = obj.type_;
 	return ;
 }
 

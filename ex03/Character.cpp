@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:46:28 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 13:16:17 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 15:50:18 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,13 @@ Character::Character( const Character& obj ): ICharacter() {
 		else
 			inventory_[i] = NULL;
 	}
-	*this = obj;
 	return ;
 };
 
 Character&	Character::operator=( const Character& rhs ) {
 	if (this != &rhs) {
 		name_ = rhs.name_;
-		for (int i = 0; i < 4;) {
+		for (int i = 0; i < 4; ++i) {
 			if (inventory_[i])
 				delete	inventory_[i];
 			if (rhs.inventory_[i])

@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:28:23 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 13:31:20 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/08/31 15:45:26 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,13 @@ MateriaSource::~MateriaSource() {
 }
 
 MateriaSource&	MateriaSource::operator=( const MateriaSource& rhs ) {
-	if (this != &rhs ) {
-		
+	if (this != &rhs) {
+		for (int i = 0; i < 4; ++i) {
+			if (materias_[i]) {
+				delete	materias_[i];
+				materias_[i] = NULL;
+			}
+		}
 	}
 	return *this;
 }
