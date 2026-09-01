@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 14:38:09 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 16:27:25 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 11:06:26 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Brain::~Brain() {
 
 void	Brain::SetIdeas(int index, std::string str) {
 	if (index < 0 || index > 99)
-		std::cout << "Index 0-99\n";
+		std::cerr << "Bad index need to be between 0-99\n";
 	else {
 		ideas[index] = str;
 	}
@@ -48,7 +48,7 @@ void	Brain::SetIdeas(int index, std::string str) {
 
 std::string	Brain::GetIdeas(int index) {
 	if (index < 0 || index > 99)
-		std::cout << "Index 0-99\n";
+		std::cerr << "Bad index need to be between 0-99\n";
 	else {
 		return ideas[index];
 	}

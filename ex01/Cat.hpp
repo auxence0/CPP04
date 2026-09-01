@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/19 16:55:50 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 16:06:07 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 10:55:53 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ class	Cat: public Animal {
 		virtual ~Cat();
 		virtual void	makeSound() const;
 		void	SetIdeas(int index, std::string str);
-		std::string	GetIdeas(int index);	private:
+		std::string	GetIdeas(int index);
+	private:
 		Brain*	brain;
 };
 

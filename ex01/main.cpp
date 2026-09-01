@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 13:54:32 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 16:28:20 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 11:08:15 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int main() {
 	const Animal* i = new Cat();
 
 	
-	delete j;//should not create a leak
+	delete j;
 	delete i;
 
-	std::cout << "\nCreate array of 10 Animal and fill w 5-5 Dog-Cat\n\n";
+	std::cout << "\nCreate array of 10 Animals and fill w 5-5 Dog-Cat\n\n";
 
 	Animal* animals[10];
 	for (int i = 0; i < 5; ++i) {
@@ -44,13 +44,17 @@ int main() {
 	Dog	dogo_tmp = dogo;
 	Dog	dogo_cpy(dogo);
 
+	std::cout << "\n\n";
 	dogo.SetIdeas(0, "os");
+	dogo.SetIdeas(0, "nonos");
+	dogo.SetIdeas(-4, "err");
 	dogo_tmp.SetIdeas(0, "niche");
 	dogo_cpy.SetIdeas(0, "clebard");
 
 	std::cout << "\n1st Str of dogo " << dogo.GetIdeas(0) << "\n";
 	std::cout << "1st Str of dogo_tmp " << dogo_tmp.GetIdeas(0) << "\n";
-	std::cout << "1st Str of dogo_cpy " << dogo_cpy.GetIdeas(0) << "\n\n";
+	std::cout << "1st Str of dogo_cpy " << dogo_cpy.GetIdeas(0) << "\n";
+	std::cout << "Wrong Str of dogo_cpy " << dogo.GetIdeas(-4) << "\n\n";
 
 	return 0;
 }
