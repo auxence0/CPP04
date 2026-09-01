@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/21 13:54:32 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/21 17:21:39 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 11:10:44 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int main() {
 	std::cout << "1st Str of dogo_tmp " << dogo_tmp.GetIdeas(0) << "\n";
 	std::cout << "1st Str of dogo_cpy " << dogo_cpy.GetIdeas(0) << "\n\n";
 
-	Animal* test_abstract = new Animal();
+	// Animal* test_abstract = new Animal();
 
 	return 0;
 }
