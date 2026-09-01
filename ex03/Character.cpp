@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:46:28 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 17:56:49 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 11:16:06 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ void	Character::use( int idx, ICharacter& target ) {
 		std::cout << inventory_[idx]->getType();
 		inventory_[idx]->use(target);
 	}
+	std::cout << "Nothing to use\n";
 	return ;
 }

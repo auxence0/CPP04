@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 14:13:18 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 15:43:34 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 11:15:22 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Cure::~Cure() {
 }
 
 void	Cure::use( ICharacter& target ) {
-	std::cout << "* heals" << target.getName() << "'s wounds *\n";
+	std::cout << "* heals " << target.getName() << "'s wounds *\n";
 	return ;
 }
 

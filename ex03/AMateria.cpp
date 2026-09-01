@@ -6,11 +6,12 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 14:47:38 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 11:12:39 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 11:14:45 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 AMateria::AMateria(): type_("Default") {
 	return ;
@@ -44,6 +45,6 @@ void	AMateria::setType( std::string type ) {
 }
 
 void	AMateria::use( ICharacter& target ) {
-	(void)target;
+	std::cout << "Default attack " << target.getName() << "\n";
 	return ;
 }
